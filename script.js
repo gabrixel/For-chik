@@ -107,3 +107,12 @@ function burst(amount) {
   }
 }
 setInterval(() => burst(1), 1800);
+const closeModal = document.getElementById("closeModal");
+const modal = document.getElementById("modal");
+
+if (closeModal && modal) {
+  closeModal.addEventListener("click", () => {
+    modal.hidden = true;
+    modal.style.display = "none";
+  });
+}
