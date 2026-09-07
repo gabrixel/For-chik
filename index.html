@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Chik ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hearts" aria-hidden="true"></div>
+
+  <div id="loader" class="screen">
+    <div class="loader-card">
+      <div class="envelope">💌</div>
+      <p class="eyebrow">A little something for you...</p>
+      <h1>For my Chik ♡</h1>
+      <div class="progress"><span id="bar"></span></div>
+      <p id="loadingText">collecting courage...</p>
+      <button id="openBtn" class="primary" hidden>Open it ♡</button>
+    </div>
+  </div>
+
+  <main id="site" hidden>
+    <nav>
+      <button data-go="start">♡ For Chik</button>
+      <div>
+        <button data-go="story">Our story</button>
+        <button data-go="things">Things</button>
+        <button data-go="future">Future</button>
+        <button data-go="confession">The confession</button>
+      </div>
+    </nav>
+
+    <section id="start" class="hero">
+      <div class="glow"></div>
+      <p class="eyebrow">A tiny corner of the internet, made for</p>
+      <h1>Amariah Francesca</h1>
+      <p class="nickname">but Chik is fine ♡</p>
+      <p class="sub">I had something I wanted to say, so I figured I'd make an entire website instead.</p>
+      <button class="primary" data-go="story">Start reading ↓</button>
+    </section>
+
+    <section id="story" class="section">
+      <div class="paper">
+        <span class="stamp">A LETTER FOR YOU</span>
+        <h2>How it all started</h2>
+        <p>When I transferred in senior high, I wasn't really expecting to meet someone I'd eventually become this comfortable with.</p>
+        <p>Then somehow, we started becoming friends. Somewhere between the conversations, the random moments, and you just being... you, I started realizing that I genuinely liked having you around.</p>
+        <button class="ghost" data-reveal="storyMore">There's more ↓</button>
+        <p id="storyMore" class="reveal">We don't have a hundred memories yet, and honestly, that's okay. I think that's what makes this feel kind of exciting — there's still so much left to discover.</p>
+      </div>
+    </section>
+
+    <section id="things" class="section dark">
+      <p class="eyebrow">Things I probably shouldn't admit this easily</p>
+      <h2>Things I like about you</h2>
+      <div class="cards">
+        <button class="card" data-pop="Your goofiness. It's genuinely one of my favorite things about you.">
+          <span>01</span><b>♡ Goofiness</b><small>tap me</small>
+        </button>
+        <button class="card" data-pop="That lazy-genius energy where you somehow make things look effortless.">
+          <span>02</span><b>✦ Lazy genius</b><small>tap me</small>
+        </button>
+        <button class="card" data-pop="And yes, you're cute. I was not making a whole confession website just to conveniently leave that out.">
+          <span>03</span><b>♡ Just... you</b><small>tap me</small>
+        </button>
+      </div>
+      <div id="pop" class="popup" hidden></div>
+    </section>
+
+    <section id="future" class="section sky">
+      <div class="two-col">
+        <div>
+          <p class="eyebrow">September 13–15</p>
+          <h2>Maybe more memories?</h2>
+          <p>We're heading to Puerto for DSTF. I don't know exactly what those days are going to look like, but I hope they're the beginning of more memories we get to make together.</p>
+          <p>The big moments, the small ones, the random ones — I'd like to remember them.</p>
+          <button class="primary" data-reveal="futureNote">Open a little note</button>
+          <p id="futureNote" class="note reveal">Same place, new memories. Maybe that's enough to look forward to. ♡</p>
+        </div>
+        <div class="polaroid">
+          <div class="fake-photo">🌅</div>
+          <b>Puerto + DSTF</b>
+          <small>Sep 13–15</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="hidden" class="section hidden-section">
+      <button id="secretBtn" class="secret">🔒 There's a hidden message</button>
+      <div id="secret" class="secret-message" hidden>
+        <h2>You found it.</h2>
+        <p>If you ever wonder whether this was just a random impulse... it wasn't.</p>
+        <p>I've liked the person you've let me get to know. And whatever happens after this, I hope we still get to make the kind of memories that make this little confession worth writing.</p>
+      </div>
+    </section>
+
+    <section id="confession" class="section confession">
+      <p class="eyebrow">Okay... enough stalling.</p>
+      <h2>So, Chik...</h2>
+      <p class="big">I genuinely like you.</p>
+      <p>Not because I expect you to suddenly give me an answer or because I want to put you on the spot. I just wanted to be honest.</p>
+      <p>Somewhere along the way, you became someone I really enjoy knowing, and I'd like to know you even more.</p>
+
+      <div class="choices">
+        <p>No pressure. Seriously. You don't owe me a certain answer.</p>
+        <button class="choice yes" id="yesBtn">♡ I'd like to know you more</button>
+        <button class="choice time" id="timeBtn">♡ I need some time</button>
+      </div>
+      <div id="response" class="response" hidden></div>
+    </section>
+
+    <footer>made with too much courage & a little bit of code ♡</footer>
+  </main>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-box">
+      <button id="closeModal" class="close">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <button id="music" class="music" aria-label="Toggle ambient music">♫ <span>music</span></button>
+  <script src="script.js"></script>
+</body>
+</html>
